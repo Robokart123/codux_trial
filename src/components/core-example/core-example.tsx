@@ -15,8 +15,8 @@ export const CoreExample = ({ className }: CoreExampleProps) => {
         <Example header="Core Example" className={classNames(styles.root, className)}>
             <ButtonGroup>
                 <Button text="Primary" intent="primary" disabled={true} aria-disabled />
+                <Button intent={Intent.SUCCESS} text="a" />
                 <Button intent={Intent.WARNING} text="Warning" />
-                <Button intent={Intent.SUCCESS} text="Success" />
                 <Button intent={Intent.DANGER} text="Danger" />
             </ButtonGroup>
             <br />
