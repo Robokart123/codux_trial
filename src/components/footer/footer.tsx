@@ -26,17 +26,17 @@ export const Footer = ({ className }: FooterProps) => {
                     </div>
                 </div>
                 <div className={styles.socials}>
-                <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
-                <GithubSvg className={styles.logo} />
-                </a>
+                    <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
+                        <GithubSvg className={styles.logo} />
+                    </a>
 
-                <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
-                <FacebookSvg className={styles.logo} />
-                </a>
+                    <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
+                        <FacebookSvg className={styles.logo} />
+                    </a>
 
-                <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
-                <TwitterxSvg className={styles.logo} />
-                </a>
+                    <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
+                        <TwitterxSvg className={styles.logo} />
+                    </a>
                 </div>
             </div>
         </div>
