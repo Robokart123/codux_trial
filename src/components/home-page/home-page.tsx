@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import styles from './home-page.module.scss';
-import videoSrc from '../../assets/Demo_Video.mp4'; // Adjust the path as needed
+import videoSrc from '../../assets/Architecture.mp4'; // Adjust the path as needed
 
 export interface HomePageProps {
     className?: string;

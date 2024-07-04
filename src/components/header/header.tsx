@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import styles from './header.module.scss';
-import { Link, NavLink } from 'react-router-dom';
 import LogoSvg from '../../assets/robokart_logo.svg';
 import About_module from '../about/about.module.scss';
 
@@ -12,25 +11,23 @@ export const Header = ({ className }: HeaderProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <a href="/" className={About_module.title}>
-                <div className={styles.svgContainer}onClick={(e) => {
-      e.preventDefault();
-      window.location.href='http://robokart.com';}}>
+                <div
+                    className={styles.svgContainer}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = 'http://robokart.com';
+                    }}
+                >
                     <LogoSvg />
                 </div>
             </a>
             <div className={styles.menu}>
-                <NavLink
-                    to="/"
-                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                >
+                <a href="/" className={styles.link}>
                     Home
-                </NavLink>
-                <NavLink
-                    to="/"
-                    className={({ isActive }) => classNames({ [styles.active]: isActive })}
-                >
+                </a>
+                <a href="/about" className={styles.link}>
                     About
-                </NavLink>
+                </a>
             </div>
         </div>
     );
