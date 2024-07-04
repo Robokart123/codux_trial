@@ -1,90 +1,92 @@
 @import '../../styles/theme.module.scss';
 
-
 .root {
-    font: $large-font;
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5em;
-    background-color: rgba(0, 0, 0, 0);
-    padding-top: 2em;
-    padding-bottom: 2em;
-    opacity: 1;
+  font: $large-font;
+  display: block;
+  flex-direction: column;
+  row-gap: $mobile-width;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 2em;
+  padding-bottom: 2em;
+  opacity: 1;
+  position: static;
+  column-gap: $mobile-width;
 }
 
 .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-    border-radius: 0px;
-    display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  border-radius: 0px;
+  display: block;
 }
 
 .title {
-    font: $title-font;
-    text-align: center;
-    letter-spacing: 0.4rem;
+  font: $title-font;
+  text-align: center;
+  letter-spacing: 0.4rem;
 
-    @media only screen and (max-width: $mobile-width) {
-        font-size: 3rem;
-    }
-    color: #ffffff;
-    padding-top: 100px;
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 3rem;
+  }
+  color: #ffffff;
+  padding-top: 100px;
 }
 
 .paragraph {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5em;
-    font: $paragraph-font;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  font: $paragraph-font;
 
-    @media only screen and (max-width: $mobile-width) {
-        font-size: 1rem;
-    }
-    color: #ffffff;
-    padding-top: 40px;
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 1rem;
+  }
+  color: #ffffff;
+  padding-top: 40px;
 }
 
 .text {
-    width: 80%;
-    font-weight: 300;
-    font-size: 1.8rem;
+  width: 80%;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
 .button {
-    font: $button-font;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: $white;
-    border-radius: 9999px;
-    align-self: center;
-    padding-right: 26px;
-    padding-left: 26px;
-    padding-bottom: 12px;
-    padding-top: 12px;
-    &:disabled {
-        pointer-events: none;
-        opacity: 1;
-        background-color: rgba(77, 77, 77, 0.8);
-        cursor: not-allowed;
-    }
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-    }
+  font: $button-font;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $white;
+  border-radius: 9999px;
+  align-self: center;
+  padding-right: 26px;
+  padding-left: 26px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  &:disabled {
+    pointer-events: none;
+    opacity: 1;
+    background-color: rgba(77, 77, 77, 0.8);
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .image {
-    align-self: center;
-    height: 14em;
-    margin-top: 1em;
-    width: 24em;
+  align-self: center;
+  height: 14em;
+  margin-top: 1em;
+  width: 24em;
 }
 .buttons {
-    text-align: center;
-    position: static;
+  text-align: center;
+  position: static;
 }

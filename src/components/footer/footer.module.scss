@@ -1,0 +1,55 @@
+.root {
+  background-color: #ffffff;
+  position: absolute; /* Change to fixed for a sticky footer */
+  bottom: 0; /* Stick to the bottom of the viewport */
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  padding: 0px; /* Add padding for spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.socials {
+  text-align: center;
+  margin-right: 5px;
+  order: 1;
+  display: flex;
+  position: static;
+  overflow: visible;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: 0px;
+  flex-direction: row;
+}
+.info {
+  display: grid;
+  font-weight: 400;
+  font-size: 15px;
+  position: static;
+  line-height: 1;
+  flex-direction: row;
+  grid-auto-flow: column;
+  gap: 1px;
+  grid-template-rows: 10px;
+}
+.footer {
+  font-size: 30px;
+  display: flex;
+  line-height: 1.2;
+  gap: 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.main {
+  display: inline;
+}
