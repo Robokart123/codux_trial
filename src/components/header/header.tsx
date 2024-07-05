@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './header.module.scss';
-import { ReactComponent as LogoSvg } from '../../assets/robokart_logo.svg';
+import LogoSvg from '../../assets/robokart_logo.svg?react'; // Correct usage
 
 export interface HeaderProps {
     className?: string;

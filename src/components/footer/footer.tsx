@@ -1,8 +1,9 @@
 import classNames from 'classnames';
 import styles from './footer.module.scss';
-import { ReactComponent as TwitterxSvg } from '../../assets/twitterx.svg';
-import { ReactComponent as FacebookSvg } from '../../assets/facebook.svg';
-import { ReactComponent as GithubSvg } from '../../assets/github.svg';
+import GithubSvg from '../../assets/github.svg?react';
+import FacebookSvg from '../../assets/facebook.svg?react';
+import TwitterxSvg from '../../assets/twitterx.svg?react';
+
 
 export interface FooterProps {
     className?: string;

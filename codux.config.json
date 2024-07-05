@@ -23,7 +23,7 @@
   "styling": {
     "solution": "scss modules"
   },
-  "svgLoader": "both",
+  "svgLoader": "asset",
   "addPanel": {
     "assets": ["@codux-boards/react-blueprint"]
   }
