@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import styles from './header.module.scss';
 import LogoSvg from '../../assets/robokart_logo.svg?react'; // Correct usage
 
-export interface HeaderProps {
+export default interface HeaderProps {
     className?: string;
 }
 

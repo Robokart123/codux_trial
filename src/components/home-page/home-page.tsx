@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from './home-page.module.scss';
 import videoSrc from '../../assets/Architecture.mp4'; // Adjust the path as needed
 
-export interface HomePageProps {
+export default interface HomePageProps {
     className?: string;
 }
 

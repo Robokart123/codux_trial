@@ -5,7 +5,7 @@ import FacebookSvg from '../../assets/facebook.svg?react';
 import TwitterxSvg from '../../assets/twitterx.svg?react';
 
 
-export interface FooterProps {
+export default interface FooterProps {
     className?: string;
 }
 
