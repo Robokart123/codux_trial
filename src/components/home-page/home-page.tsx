@@ -53,7 +53,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                 return;
             }
 
-            const transitionDuration = 5; // 5 seconds
+            const transitionDuration = 1; // 5 seconds
             let requiredRate = timeDifference / transitionDuration;
 
             requiredRate = clamp(requiredRate, 0, 16);
