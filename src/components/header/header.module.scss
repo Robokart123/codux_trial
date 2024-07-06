@@ -10,9 +10,14 @@
   top: 0;
   left: 0px;
   right: 0px;
+  padding: 10px;
 }
 .logo {
   text-align: center;
   width: 100px;
   height: 40px;
+}
+.Info {
+  display: flex;
+  gap: 20px;
 }

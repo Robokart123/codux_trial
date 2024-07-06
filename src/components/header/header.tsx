@@ -18,6 +18,10 @@ export const Header = ({ className }: HeaderProps) => {
                     <LogoSvg className={styles.logo} />
                 </a>
             </div>
+            <div className={styles.Info}>
+                <div>Home</div>
+                <div>About</div>
+            </div>
         </div>
     );
 };
