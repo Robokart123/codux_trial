@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import styles from './about.module.scss';
+import { Header } from '../header/header';
 
 export interface AboutProps {
     className?: string;
@@ -9,16 +10,17 @@ export interface AboutProps {
  * This component was created using Codux's Default new component template.
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
+
 export const About = ({ className }: AboutProps) => {
     return (
         <div className={classNames(styles.root, className)}>
+            <Header />
             <div className={styles.text}>
-                <div className={styles.title}>I&apos;M A TITLE</div>
+                <div className={styles.title}>About Us</div>
                 <div className={styles.paragraph}>
-                    I’m a paragraph. Add your own text and edit me on properties panel on the right.
-                    It’s easy. Just select me and make changes to the font on the styles panel on
-                    the right. I’m a great place for you to tell a story and let your viewers know a
-                    little more about you.
+                    Welcome to our Company, where innovation meets excellence in every project we
+                    undertake. Established in 20XX, we have been at the forefront of delivering
+                    high-quality solutions .{' '}
                 </div>
             </div>
             <img

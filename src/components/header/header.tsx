@@ -1,10 +1,12 @@
 import classNames from 'classnames';
 import styles from './header.module.scss';
 import LogoSvg from '../../assets/robokart_logo.svg?react'; // Correct usage
+import { Link } from 'react-router-dom';
 
 export default interface HeaderProps {
     className?: string;
 }
+
 
 /**
  * This component was created using Codux's Default new component template.
@@ -19,8 +21,12 @@ export const Header = ({ className }: HeaderProps) => {
                 </a>
             </div>
             <div className={styles.Info}>
-                <div>Home</div>
-                <div>About</div>
+                <div>
+                    <Link to="/home">Home</Link>
+                </div>
+                <div>
+                    <Link to="/about">About</Link>
+                </div>
             </div>
         </div>
     );
