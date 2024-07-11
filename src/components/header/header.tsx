@@ -14,17 +14,22 @@ export interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <div className={styles.logoContainer}>
-                <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
-                    <LogoSvg className={styles.logo} />
-                </a>
-            </div>
-            <div className={styles.Info}>
-                <div>
-                    <Link to="/home">Home</Link>
+            <div className={styles.header}>
+                <div className={styles.logoContainer}>
+                    <a
+                        href="http://robokart.com"
+                        className={classNames(styles.logoLink, styles.logo)}
+                    >
+                        <LogoSvg className={styles.logo} />
+                    </a>
                 </div>
-                <div>
-                    <Link to="/about">About</Link>
+                <div className={styles.Info}>
+                    <div>
+                        <Link to="/example_home">Home</Link>
+                    </div>
+                    <div>
+                        <Link to="/example_about">About</Link>
+                    </div>
                 </div>
             </div>
         </div>

@@ -30,17 +30,11 @@ export const Footer = ({ className }: FooterProps) => {
                         <GithubSvg className={styles.logo} />
                     </a>
 
-                    <a
-                        href="http://robokart.com"
-                        className={classNames(styles.logoLink, styles.logo)}
-                    >
+                    <a href="http://robokart.com" className={styles.logo_link}>
                         <FacebookSvg className={styles.logo} />
                     </a>
 
-                    <a
-                        href="http://robokart.com"
-                        className={classNames(styles.logoLink, styles.logo)}
-                    >
+                    <a href="http://robokart.com" className={styles.logo_link}>
                         <TwitterxSvg className={styles.logo} />
                     </a>
                 </div>

@@ -1,25 +1,39 @@
 .root {
   background-color: #ffffff;
-  position: absolute; /* Change to fixed for a sticky footer */ /* Stick to the bottom of the viewport */
+  position: fixed; /* Stick to the top of the viewport */
   width: 100%;
-  height: 50px; /* Adjust height as needed */ /* Add padding for spacing */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  height: 50px; /* Adjust height as needed */
   align-items: center;
   top: 0;
-  left: 0px;
-  right: 0px;
-  padding: 10px;
+  left: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
 }
+
 .logo {
   text-align: center;
   width: 100px;
   height: 40px;
 }
+
 .Info {
   display: flex;
   gap: 20px;
   flex-direction: row;
   font-size: 14px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em 0.2em 1em;
+  position: fixed; /* Stick to the top of the viewport */
+  width: 100%;
+  height: 50px; /* Adjust height as needed */
+  top: 0;
+  left: 0;
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  overflow: hidden; /* Prevent horizontal overflow */
 }
