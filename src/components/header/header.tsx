@@ -1,12 +1,11 @@
 import classNames from 'classnames';
 import styles from './header.module.scss';
 import LogoSvg from '../../assets/robokart_logo.svg?react'; // Correct usage
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
-export default interface HeaderProps {
+export interface HeaderProps {
     className?: string;
 }
-
 
 /**
  * This component was created using Codux's Default new component template.

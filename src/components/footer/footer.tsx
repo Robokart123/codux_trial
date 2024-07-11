@@ -4,7 +4,6 @@ import GithubSvg from '../../assets/github.svg?react';
 import FacebookSvg from '../../assets/facebook.svg?react';
 import TwitterxSvg from '../../assets/twitterx.svg?react';
 
-
 export default interface FooterProps {
     className?: string;
 }
@@ -27,15 +26,21 @@ export const Footer = ({ className }: FooterProps) => {
                     </div>
                 </div>
                 <div className={styles.socials}>
-                    <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
+                    <a href="http://robokart.com" className={styles.logo_link}>
                         <GithubSvg className={styles.logo} />
                     </a>
 
-                    <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
+                    <a
+                        href="http://robokart.com"
+                        className={classNames(styles.logoLink, styles.logo)}
+                    >
                         <FacebookSvg className={styles.logo} />
                     </a>
 
-                    <a href="http://robokart.com" className={classNames(styles.logoLink, styles.logo)}>
+                    <a
+                        href="http://robokart.com"
+                        className={classNames(styles.logoLink, styles.logo)}
+                    >
                         <TwitterxSvg className={styles.logo} />
                     </a>
                 </div>

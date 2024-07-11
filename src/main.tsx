@@ -1,22 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App';
-import './index.css';
-import {
-    MemoryRouter,
-    Routes,
-    Route,
-} from "react-router-dom";
+import { routes } from './routes';
+import './index.css'; // Ensure you import your styles
 
-import '@blueprintjs/core/lib/css/blueprint.css';
-import '@blueprintjs/datetime/lib/css/blueprint-datetime.css';
-import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-import '@blueprintjs/select/lib/css/blueprint-select.css';
-import '@blueprintjs/table/lib/css/table.css';
+const router = createBrowserRouter(routes);
 
 ReactDOM.render(
-    <MemoryRouter>
-        <App />
-    </MemoryRouter>,
-    document.getElementById('root') as HTMLElement,
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
