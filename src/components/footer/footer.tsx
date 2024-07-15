@@ -27,13 +27,13 @@ export const Footer = ({ className }: FooterProps) => {
                 </div>
                 <div className={styles.socials}>
                     <a href="http://robokart.com" className={styles.logo_link}>
-                        <FacebookSvg className={styles.logo} />
+                        <FacebookSvg className={styles.logo_link} />
                     </a>
                     <a href="http://robokart.com" className={styles.logo_link}>
-                        <TwitterxSvg className={styles.logo} />
+                        <TwitterxSvg className={styles.logo_link} />
                     </a>
                     <a href="http://robokart.com" className={styles.logo_link}>
-                        <GithubSvg className={styles.logo} />
+                        <GithubSvg className={styles.logo_link} />
                     </a>
                 </div>
             </div>
