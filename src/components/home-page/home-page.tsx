@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import styles from './home-page.module.scss';
-import videoSrc from '../../assets/Architecture.mp4'; // Adjust the path as needed
+import About_module from '../about/about.module.scss';
+import InfinityLogoSvg from '../../assets/infinity_logo.svg'; // Adjust the path as needed
 
 export default interface HomePageProps {
     className?: string;
@@ -89,36 +90,19 @@ export const HomePage = ({ className }: HomePageProps) => {
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.overlay}>
-                <div className={styles.title}>RoboKart</div>
+                <div className={styles.logo}>
+                    <img src={InfinityLogoSvg} />
+                </div>
                 <div className={styles.paragraph}>
                     <div className={styles.text}>
-                        {'Our Mission :-'}
+                        {'Quote  :-'}
                         <br />
-                        Transforming kids from consumers to creators of technology
+                        <br />
+                        &quot;Financial education is the foundation for building wealth and
+                        security. Investing wisely transforms your knowledge into a tool for
+                        achieving your dreams and securing your future.&quot;{' '}
                     </div>
                 </div>
-                <div className={styles.buttons}>
-                    {[1, 5, 10, 15].map((percentage, index) => (
-                        <button
-                            key={index}
-                            className={classNames(styles.button, {
-                                [styles.disabled]: !enabledButtons.includes(percentage),
-                            })}
-                            onClick={() => handlePlayToPercentage(percentage, percentage)}
-                            disabled={!enabledButtons.includes(percentage)}
-                        >
-                            Go to {percentage}%
-                        </button>
-                    ))}
-                </div>
-                <video
-                    ref={videoRef}
-                    className={classNames(styles.video, styles.backgroundVideo)}
-                    src={videoSrc}
-                    autoPlay
-                    muted
-                    loop
-                />
             </div>
         </div>
     );

@@ -8,6 +8,16 @@
   left: 0;
   padding: 0;
   box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  background-image: linear-gradient(180deg, #c0dbc2 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  background-color: rgba(230, 230, 230, 0), rgba(230, 230, 230, 0);
+  background-clip: border-box;
+  transition: top 0.4s; /* Smooth transition for hiding/showing the header */
+  z-index: 1; /* Ensure the root has a lower z-index */
 }
 
 .logo {
@@ -36,4 +46,10 @@
   left: 0;
   box-sizing: border-box; /* Include padding and borders in the element's total width and height */
   overflow: hidden; /* Prevent horizontal overflow */
+  z-index: 2; /* Ensure the header is above the gradient */
+  transition: top 0.3s; /* Smooth transition for hiding/showing the header */
+}
+
+.hidden {
+  top: -50px; /* Adjust this value to match the height of your header */
 }

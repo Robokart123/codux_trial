@@ -33,7 +33,7 @@
   @media only screen and (max-width: $mobile-width) {
     font-size: 3rem;
   }
-  color: #ffffff;
+  color: $black;
   padding-top: 100px;
   border-radius: 0px;
 }
@@ -48,7 +48,7 @@
   @media only screen and (max-width: $mobile-width) {
     font-size: 1rem;
   }
-  color: #ffffff;
+  color: $black;
   padding-top: 40px;
 }
 
@@ -90,4 +90,26 @@
 .buttons {
   text-align: center;
   position: static;
+}
+.logo {
+  text-align: center;
+  position: static;
+  width: 40%;
+  height: 40%;
+  align-self: center;
+  padding-top: 10%;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.overlay {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }

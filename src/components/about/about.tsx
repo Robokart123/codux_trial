@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import styles from './about.module.scss';
-import { Header } from '../header/header';
 
 export interface AboutProps {
     className?: string;
@@ -14,7 +13,6 @@ export interface AboutProps {
 export const About = ({ className }: AboutProps) => {
     return (
         <div className={classNames(styles.root, className)}>
-            <Header />
             <div className={styles.text}>
                 <div className={styles.title}>About Us</div>
                 <div className={styles.paragraph}>

@@ -6,9 +6,9 @@ export default createBoard({
     Board: () => <App />,
     isSnippet: true,
     environmentProps: {
-        canvasHeight: 871, // Synchronize canvas height with window height
-        canvasWidth: 2377, // Synchronize canvas width with window width
-        windowWidth: 605,
-        windowHeight: 720,
+        canvasHeight: 1811, // Synchronize canvas height with window height
+        canvasWidth: 2128, // Synchronize canvas width with window width
+        windowWidth: 1024,
+        windowHeight: 768,
     },
 });

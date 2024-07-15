@@ -1,6 +1,6 @@
 .root {
-  background-color: #ffffff;
-  position: fixed; /* Stick to the bottom of the viewport */
+  background-color: transparent;
+  position: static; /* Stick to the bottom of the viewport */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -11,6 +11,13 @@
   padding: 0 1em; /* Add padding for horizontal spacing */
   box-sizing: border-box; /* Include padding and borders in the element's total width and height */
   overflow: hidden; /* Prevent horizontal overflow */
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 15%, #f1fff3 100%);
+  background-position: 0% 0%;
+  background-size: auto auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  background-clip: border-box;
 }
 
 .socials {

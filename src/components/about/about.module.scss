@@ -1,41 +1,46 @@
 @import '../../styles/theme.module.scss';
 
 .root {
-    font: $large-font;
-    display: flex;
-    flex-direction: row;
-    background-color: $snow-white;
-    padding-top: 2em;
-    padding-bottom: 3em;
-    justify-content: center;
-    padding-right: 7em;
-    padding-left: 7em;
-    column-gap: 5em;
+  font: $large-font;
+  display: flex;
+  flex-direction: row;
+  background-color: $snow-white;
+  column-gap: 5em;
+  position: static;
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  padding-right: 8em;
+  padding-left: 8em;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .title {
-    font: $title-font;
-    letter-spacing: 0.4rem;
-    width: 20%;
-    height: 100%;
-    max-width: none;
+  font: $title-font;
+  letter-spacing: 0.4rem;
+  width: 50%;
+  max-width: none;
+  overflow: visible;
+  position: static;
+  display: block;
+  height: 20%;
 }
 
 .paragraph {
-    margin-bottom: 1.5em;
-    font: $paragraph-font;
+  margin-bottom: 1.5em;
+  font: $paragraph-font;
 }
 
 .text {
-    text-align: start;
-    width: 50vw;
-    margin-top: 3em;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
+  text-align: start;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  position: static;
+  row-gap: 1em;
+  width: 40vw;
 }
 
 .image {
-    align-self: center;
-    width: 20vw;
+  align-self: center;
+  width: 20vw;
 }
