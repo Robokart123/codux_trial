@@ -21,8 +21,7 @@ export const Footer = ({ className }: FooterProps) => {
                     <div className={styles.info}>
                         <br />
                         +91 000000
-                        <br />
-                        robokart.com
+                        <br />Jay Ubale{' '}
                     </div>
                 </div>
                 <div className={styles.socials}>

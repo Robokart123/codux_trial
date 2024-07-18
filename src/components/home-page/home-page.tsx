@@ -1,19 +1,20 @@
+// HomePage.tsx
+
 import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import styles from './home-page.module.scss';
-import About_module from '../about/about.module.scss';
 import InfinityLogoSvg from '../../assets/infinity_logo.svg'; // Adjust the path as needed
+import GoogleSheetComponent from '../google-sheet-component/google-sheet-component'; // Adjust the path as needed
 
-export default interface HomePageProps {
+export interface HomePageProps {
     className?: string;
 }
 
 const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, min), max);
 
-export const HomePage = ({ className }: HomePageProps) => {
+export const HomePage: React.FC<HomePageProps> = ({ className }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const animationRef = useRef<number | null>(null);
-    const [enabledButtons, setEnabledButtons] = useState<number[]>([1, 5]);
 
     useEffect(() => {
         const handleVisibilityChange = () => {
@@ -40,58 +41,32 @@ export const HomePage = ({ className }: HomePageProps) => {
         };
     }, []);
 
-    const handlePlayToPercentage = (percentage: number, index: number) => {
-        if (videoRef.current) {
-            const video = videoRef.current;
-            const targetTime = video.duration * (percentage / 100);
-            const currentTime = video.currentTime;
-            const timeDifference = targetTime - currentTime;
+    useEffect(() => {
+        const handleScroll = () => {
+            const rootElement = document.querySelector(`.${styles.root}`) as HTMLElement;
+            const logoElement = document.querySelector(`.${styles.logo} img`) as HTMLElement;
 
-            if (timeDifference < 0) {
-                video.currentTime = targetTime;
-                video.playbackRate = 1;
-                video.play();
-                return;
+            if (rootElement && logoElement) {
+                const scrollTop = window.scrollY;
+                const maxScroll = window.innerHeight;
+                const scrollFactor = Math.min(scrollTop / maxScroll, 1);
+
+                rootElement.style.transform = `translateY(${scrollTop * -0.5}px)`;
+                logoElement.style.transform = `translateY(${scrollFactor * -50}px)`; // Adjust the value as needed
             }
+        };
 
-            const transitionDuration = 1; // 5 seconds
-            let requiredRate = timeDifference / transitionDuration;
-
-            requiredRate = clamp(requiredRate, 0, 16);
-
-            video.playbackRate = requiredRate;
-
-            if (animationRef.current) {
-                cancelAnimationFrame(animationRef.current);
-            }
-
-            const animate = () => {
-                if (Math.abs(video.currentTime - targetTime) < 0.1) {
-                    video.currentTime = targetTime;
-                    video.playbackRate = 1;
-                    video.play();
-                    setEnabledButtons((prev) => {
-                        if (index < 15 && !prev.includes(index + 5)) {
-                            return [...prev, index + 5];
-                        }
-                        return prev;
-                    });
-                    return;
-                }
-
-                animationRef.current = requestAnimationFrame(animate);
-            };
-
-            video.play();
-            animate();
-        }
-    };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.overlay}>
                 <div className={styles.logo}>
-                    <img src={InfinityLogoSvg} />
+                    <img src={InfinityLogoSvg} alt="Infinity Logo" />
                 </div>
                 <div className={styles.paragraph}>
                     <div className={styles.text}>
@@ -103,6 +78,13 @@ export const HomePage = ({ className }: HomePageProps) => {
                         achieving your dreams and securing your future.&quot;{' '}
                     </div>
                 </div>
+            </div>
+            <div className={styles.chart}>
+                <GoogleSheetComponent
+                    sheetId="1h-ri5h2Xc4CUC6kfjNrQtF7nE1QS-jAKfHXROxkQNnI"
+                    range="Sheet1!A1:E32"
+                    apiKey="AIzaSyATGzA0dYpdq-jd0aGLW2HS7m7ngb2R0f4"
+                />
             </div>
         </div>
     );

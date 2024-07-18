@@ -105,6 +105,15 @@
   display: flex;
   flex-direction: column;
 }
+.chart {
+  height: 100%; /* Use full height available */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 25%;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
