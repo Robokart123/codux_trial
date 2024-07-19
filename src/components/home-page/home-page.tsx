@@ -3,8 +3,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import styles from './home-page.module.scss';
-import InfinityLogoSvg from '../../assets/infinity_logo.svg'; // Adjust the path as needed
-import GoogleSheetComponent from '../google-sheet-component/google-sheet-component'; // Adjust the path as needed
+import InfinityLogoSvg from '../../assets/robokart_logo.svg';
+import { RecordButton } from '../record-button/record-button'; // Adjust the path as needed
 
 export interface HomePageProps {
     className?: string;
@@ -70,21 +70,14 @@ export const HomePage: React.FC<HomePageProps> = ({ className }) => {
                 </div>
                 <div className={styles.paragraph}>
                     <div className={styles.text}>
-                        {'Quote  :-'}
                         <br />
-                        <br />
-                        &quot;Financial education is the foundation for building wealth and
-                        security. Investing wisely transforms your knowledge into a tool for
-                        achieving your dreams and securing your future.&quot;{' '}
+                        &quot;From Consumers to Creators.&quot;{' '}
                     </div>
                 </div>
-            </div>
-            <div className={styles.chart}>
-                <GoogleSheetComponent
-                    sheetId="1h-ri5h2Xc4CUC6kfjNrQtF7nE1QS-jAKfHXROxkQNnI"
-                    range="Sheet1!A1:E32"
-                    apiKey="AIzaSyATGzA0dYpdq-jd0aGLW2HS7m7ngb2R0f4"
-                />
+                <br />
+                <div>
+                    <RecordButton />
+                </div>
             </div>
         </div>
     );

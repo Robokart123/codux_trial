@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './header.module.scss';
-import LogoSvg from '../../assets/infinity_logo.svg?react'; // Correct usage
+import LogoSvg from '../../assets/robokart_logo.svg?react'; // Correct usage
 import { Link, NavLink } from 'react-router-dom';
 
 export interface HeaderProps {
@@ -56,6 +56,7 @@ export const Header = ({ className }: HeaderProps) => {
                     </div>
                     <div>
                         <Link to="/example_about">About</Link>
+                    </div>
                     */}
                 </div>
             </div>
