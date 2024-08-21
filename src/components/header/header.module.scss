@@ -1,49 +1,56 @@
 .root {
   background-color: #ffffff;
-  position: fixed; /* Stick to the top of the viewport */
+  position: fixed;
   width: 100%;
-  height: 5em; /* Adjust height as needed */
-  align-items: center;
+  height: 5rem;
   top: 0;
   left: 0;
   padding: 0;
-  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  box-sizing: border-box;
   background-image: linear-gradient(180deg, #c0d9db 0%, rgba(255, 255, 255, 0) 100%);
   background-repeat: repeat;
-  background-position: 50% 50%;
-  background-size: 100% 100%;
-  background-attachment: scroll;
-  background-origin: padding-box;
-  background-color: rgba(230, 230, 230, 0), rgba(230, 230, 230, 0);
-  background-clip: border-box;
-  transition: top 0.4s; /* Smooth transition for hiding/showing the header */
-  z-index: 1; /* Ensure the root has a lower z-index */
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  transition: transform 0.4s ease-in-out;
 }
 
 .logo {
-  text-align: center;
-  width: 100px;
-  height: 40px;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+}
+
+.logoContainer {
+  text-align: left;
+  height: 8em;
+  transition: transform 0.4s ease-in-out; /* Smooth transition for the logo */
+  left: 0px;
+  top: 10em;
+  width: 8em;
 }
 
 .Info {
   display: flex;
   gap: 20px;
   flex-direction: row;
-  font-size: 14px;
+  font-size: 1.2em;
+  transition: transform 0.4s ease-in-out; /* Smooth transition for the links */
   a {
-    color: #225675; /* Sets the color of the links to white */
-    text-decoration: none; /* Removes underline by default */
+    color: #225675;
+    text-decoration: none;
     transition: color 0.3s ease;
 
     &:hover {
-        color: #e0e0e0; /* Optional: slightly change the color on hover */
+      color: #e0e0e0;
     }
 
     &:active {
-        color: #cccccc; /* Optional: change the color when active */
+      color: #cccccc;
     }
   }
+  right: 0;
+  width: 8em;
 }
 
 .header {
@@ -52,17 +59,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em 0.2em 1em;
-  position: fixed; /* Stick to the top of the viewport */
   width: 100%;
-  height: 50px; /* Adjust height as needed */
+  height: 4em;
   top: 0;
   left: 0;
-  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
-  overflow: hidden; /* Prevent horizontal overflow */
-  z-index: 2; /* Ensure the header is above the gradient */
-  transition: top 0.3s; /* Smooth transition for hiding/showing the header */
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2;
+  transition: transform 0.4s ease-in-out;
 }
 
+/* Apply the hidden state */
 .hidden {
-  top: -50px; /* Adjust this value to match the height of your header */
+  transform: translateY(-100%); /* Moves the header completely out of view */
+}
+.div1 {
 }

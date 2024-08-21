@@ -16,16 +16,13 @@ export const Header = ({ className }: HeaderProps) => {
     useEffect(() => {
         let lastScrollY = window.scrollY;
         const rootElement = document.querySelector(`.${styles.root}`) as HTMLElement;
-        const logoElement = document.querySelector(`.${styles.logo}`) as HTMLElement;
 
         const handleScroll = () => {
-            if (rootElement && logoElement) {
+            if (rootElement) {
                 if (window.scrollY > lastScrollY) {
-                    rootElement.classList.add(styles.hidden);
-                    logoElement.style.transform = 'translateY(-50px)'; // Adjust this value to match the header height
+                    rootElement.classList.add(styles.hidden); // Hide the header when scrolling down
                 } else {
-                    rootElement.classList.remove(styles.hidden);
-                    logoElement.style.transform = 'translateY(0)';
+                    rootElement.classList.remove(styles.hidden); // Show the header when scrolling up
                 }
                 lastScrollY = window.scrollY;
             }
@@ -37,6 +34,7 @@ export const Header = ({ className }: HeaderProps) => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.header}>

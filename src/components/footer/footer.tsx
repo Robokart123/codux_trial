@@ -20,19 +20,19 @@ export const Footer = ({ className }: FooterProps) => {
                     <div className={styles.main}>About Us</div>
                     <div className={styles.info}>
                         <br />
-                        +91 000000
+                        9503134540
                         <br />
-                        robokart.com
+                        bharatedu.tech
                     </div>
                 </div>
                 <div className={styles.socials}>
-                    <a href="http://robokart.com" className={styles.logo_link}>
+                    <a href="http://bharatedu.tech" className={styles.logo_link}>
                         <FacebookSvg className={styles.logo_link} />
                     </a>
-                    <a href="http://robokart.com" className={styles.logo_link}>
+                    <a href="http://bharatedu.tech" className={styles.logo_link}>
                         <TwitterxSvg className={styles.logo_link} />
                     </a>
-                    <a href="http://robokart.com" className={styles.logo_link}>
+                    <a href="http://bharatedu.tech" className={styles.logo_link}>
                         <GithubSvg className={styles.logo_link} />
                     </a>
                 </div>

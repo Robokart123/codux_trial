@@ -40,7 +40,6 @@ export const HomePage = ({ className }: HomePageProps) => {
         };
     }, []);
 
-
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.overlay}>
@@ -51,11 +50,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                 </div>
                 {/*<div className={styles.title}>Bharat Tec</div>*/}
                 <div className={styles.paragraph}>
-                    <div className={styles.text}>
-                        {'Our Mission :-'}
-                        <br />
-                        Transforming kids from consumers to creators of technology
-                    </div>
+                    <div className={styles.text}>Innovate. Inspire. Ignite.</div>
                 </div>
                 <div className={styles.gradient}></div>
                 {/*
@@ -76,6 +71,7 @@ export const HomePage = ({ className }: HomePageProps) => {
                 */}
                 <video ref={videoRef} className={styles.video} src={videoSrc} autoPlay muted loop />
             </div>
+            <div className={styles.gradient}></div>
         </div>
     );
 };
