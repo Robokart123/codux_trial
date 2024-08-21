@@ -1,3 +1,5 @@
+@import '../../styles/theme.module.scss';
+
 .root {
   background-color: transparent;
   position: static; /* Stick to the bottom of the viewport */
@@ -37,6 +39,9 @@
   grid-auto-flow: column;
   gap: 1px;
   grid-template-rows: 10px;
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 7px;
+  }
 }
 
 .footer {
@@ -51,6 +56,9 @@
   box-sizing: border-box;
   color: #565656;
   padding-bottom: 1.5em;
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 15px;
+  }
 }
 
 .main {
@@ -64,4 +72,8 @@
   width: 30px;
   height: 30px;
   fill: #565656;
+  @media only screen and (max-width: $mobile-width) {
+    width: 15px;
+    height: 15px;
+  }
 }

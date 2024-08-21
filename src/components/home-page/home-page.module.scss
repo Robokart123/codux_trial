@@ -57,6 +57,10 @@
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 1.2;
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 0.8rem;
+  }
+
 }
 
 .button {
@@ -81,16 +85,42 @@
   }
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    background-color: rgb(76, 185, 72);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @media only screen and (max-width: $mobile-width) {
+      font-size: 0.6rem;
+      padding: 1em 1.5em;
+    }
+
+    &:hover {
+      background-color: rgb(54, 127, 46);
+    }
+    border-radius: 40px;
+  }
+  flex-direction: row;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
 .image {
   align-self: center;
   height: 14em;
   margin-top: 1em;
   width: 24em;
 }
-.buttons {
-  text-align: center;
-  position: static;
-}
+
 .logo {
   text-align: center;
   position: static;
@@ -100,19 +130,31 @@
   padding-top: 10%;
   opacity: 0;
   animation: fadeIn 0.5s forwards;
+  @media only screen and (max-width: $mobile-width) {
+  width: 70%;
+  height: 70%;
+
+  }
 }
 .overlay {
   display: flex;
   flex-direction: column;
 }
 .chart {
-  height: 100%; /* Use full height available */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  margin-left: 10%;
+  height: 800px; /* Use full height available */
+  width: 100%;
+  display: block;
   margin-top: 25%;
+  padding: 50px;
+  overflow: visible;
+  box-sizing: border-box;
+  @media only screen and (max-width: $mobile-width) {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    height: 400px;
+  }
 }
 @keyframes fadeIn {
   0% {
