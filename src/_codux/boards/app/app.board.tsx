@@ -8,7 +8,7 @@ export default createBoard({
     environmentProps: {
         canvasHeight: 871, // Synchronize canvas height with window height
         canvasWidth: 2377, // Synchronize canvas width with window width
-        windowWidth: 605,
-        windowHeight: 720,
+        windowWidth: 1920,
+        windowHeight: 1080,
     },
 });

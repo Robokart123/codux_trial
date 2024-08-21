@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import styles from './home-page.module.scss';
-import videoSrc from '../../assets/Architecture.mp4'; // Adjust the path as needed
+import LogoSvg from '../../assets/Bharat_logo.svg?react'; // Correct usage
+import videoSrc from '../../assets/Demo_Video.mp4'; // Adjust the path as needed
 
 export default interface HomePageProps {
     className?: string;
@@ -39,57 +40,16 @@ export const HomePage = ({ className }: HomePageProps) => {
         };
     }, []);
 
-    const handlePlayToPercentage = (percentage: number, index: number) => {
-        if (videoRef.current) {
-            const video = videoRef.current;
-            const targetTime = video.duration * (percentage / 100);
-            const currentTime = video.currentTime;
-            const timeDifference = targetTime - currentTime;
-
-            if (timeDifference < 0) {
-                video.currentTime = targetTime;
-                video.playbackRate = 1;
-                video.play();
-                return;
-            }
-
-            const transitionDuration = 1; // 5 seconds
-            let requiredRate = timeDifference / transitionDuration;
-
-            requiredRate = clamp(requiredRate, 0, 16);
-
-            video.playbackRate = requiredRate;
-
-            if (animationRef.current) {
-                cancelAnimationFrame(animationRef.current);
-            }
-
-            const animate = () => {
-                if (Math.abs(video.currentTime - targetTime) < 0.1) {
-                    video.currentTime = targetTime;
-                    video.playbackRate = 1;
-                    video.play();
-                    setEnabledButtons((prev) => {
-                        if (index < 15 && !prev.includes(index + 5)) {
-                            return [...prev, index + 5];
-                        }
-                        return prev;
-                    });
-                    return;
-                }
-
-                animationRef.current = requestAnimationFrame(animate);
-            };
-
-            video.play();
-            animate();
-        }
-    };
 
     return (
         <div className={classNames(styles.root, className)}>
             <div className={styles.overlay}>
-                <div className={styles.title}>RoboKart</div>
+                <div className={styles.logo}>
+                    <a href="http://robokart.com">
+                        <LogoSvg className={styles.logo} />
+                    </a>
+                </div>
+                {/*<div className={styles.title}>Bharat Tec</div>*/}
                 <div className={styles.paragraph}>
                     <div className={styles.text}>
                         {'Our Mission :-'}
@@ -97,6 +57,8 @@ export const HomePage = ({ className }: HomePageProps) => {
                         Transforming kids from consumers to creators of technology
                     </div>
                 </div>
+                <div className={styles.gradient}></div>
+                {/*
                 <div className={styles.buttons}>
                     {[1, 5, 10, 15].map((percentage, index) => (
                         <button
@@ -111,14 +73,8 @@ export const HomePage = ({ className }: HomePageProps) => {
                         </button>
                     ))}
                 </div>
-                <video
-                    ref={videoRef}
-                    className={classNames(styles.video, styles.backgroundVideo)}
-                    src={videoSrc}
-                    autoPlay
-                    muted
-                    loop
-                />
+                */}
+                <video ref={videoRef} className={styles.video} src={videoSrc} autoPlay muted loop />
             </div>
         </div>
     );

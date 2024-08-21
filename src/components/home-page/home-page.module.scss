@@ -13,16 +13,41 @@
   column-gap: $mobile-width;
 }
 
+.gradient {
+  position: absolute;
+  top: 15em;
+  background-color: transparent; /* Use transparent background */
+  width: 100%; /* Full width */
+  height: 100px; /* Adjust height as needed */
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat; /* Prevent repeating the gradient */
+  background-position: top left; /* Position the gradient starting from the top left */
+  background-size: cover; /* Ensure the gradient covers the entire element */
+  background-attachment: scroll;
+  background-clip: padding-box;
+  left: 0px;
+  right: 0px;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  height: 5em;
+  display: inline-block;
+  flex-direction: row;
+}
+
 .video {
   position: absolute;
-  top: 0;
+  top: 15em;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -2;
   border-radius: 0px;
-  display: block;
+  display: inline-block;
 }
 
 .title {
@@ -48,8 +73,8 @@
   @media only screen and (max-width: $mobile-width) {
     font-size: 1rem;
   }
-  color: #ffffff;
-  padding-top: 40px;
+  color: #225675;
+  padding-top: 3em;
 }
 
 .text {
