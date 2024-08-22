@@ -2,32 +2,50 @@
 
 .root {
   font: $large-font;
-  display: block;
+  display: flex;
   flex-direction: column;
-  row-gap: $mobile-width;
   background-color: rgba(0, 0, 0, 0);
-  padding-top: 4em;
   padding-bottom: 2em;
   opacity: 1;
   position: static;
   column-gap: $mobile-width;
+  flex-wrap: nowrap;
+  row-gap: 1em;
+  padding-top: 4em;
 }
 
-.gradient {
-  position: absolute;
-  top: 20em;
+.gradient_TopToBot {
+  position: relative;
   background-color: transparent; /* Use transparent background */
   width: 100%; /* Full width */
-  height: 100px; /* Adjust height as needed */
+  height: 3em; /* Adjust height as needed */
   box-sizing: border-box; /* Include padding and borders in the element's total width and height */
   background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat; /* Prevent repeating the gradient */
   background-position: top left; /* Position the gradient starting from the top left */
   background-size: cover; /* Ensure the gradient covers the entire element */
-  background-attachment: scroll;
   background-clip: padding-box;
   left: 0px;
   right: 0px;
+  top: 3em;
+}
+
+.gradient_BotToTop {
+  position: relative;
+  top: -3em;
+  background-color: transparent; /* Use transparent background */
+  width: 100%; /* Full width */ /* Adjust height as needed */
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-repeat: no-repeat; /* Prevent repeating the gradient */
+  background-position: top left; /* Position the gradient starting from the top left */
+  background-size: cover; /* Ensure the gradient covers the entire element */
+  background-clip: padding-box;
+  left: 0px;
+  right: 0px;
+  background-origin: padding-box;
+  background-attachment: scroll;
+  height: 3em;
 }
 
 .logo {
@@ -40,7 +58,7 @@
 }
 
 .video {
-  position: absolute;
+  position: static;
   top: 20em;
   left: 0;
   width: 100%;
@@ -74,7 +92,6 @@
     font-size: 1rem;
   }
   color: #225675;
-  padding-top: 3em;
   margin-bottom: 2em;
 }
 

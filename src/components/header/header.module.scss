@@ -1,19 +1,20 @@
 .root {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
   position: fixed;
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   top: 0;
   left: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: linear-gradient(180deg, #c0d9db 0%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: repeat;
+  background-image: linear-gradient(180deg, rgb(220, 253, 255) 10%, rgba(255, 255, 255, 0) 90%);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: 2;
+  z-index: 5;
   transition: transform 0.4s ease-in-out;
 }
+
 
 .logo {
   text-align: left;
@@ -32,7 +33,7 @@
 
 .Info {
   display: flex;
-  gap: 20px;
+  gap: 1em;
   flex-direction: row;
   font-size: 1.2em;
   transition: transform 0.4s ease-in-out; /* Smooth transition for the links */
@@ -42,11 +43,11 @@
     transition: color 0.3s ease;
 
     &:hover {
-      color: #e0e0e0;
+      color: #7aa2b9;
     }
 
     &:active {
-      color: #cccccc;
+      color: #7aa2b9;
     }
   }
   right: 0;
@@ -73,5 +74,4 @@
 .hidden {
   transform: translateY(-100%); /* Moves the header completely out of view */
 }
-.div1 {
-}
+

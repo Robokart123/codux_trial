@@ -42,36 +42,24 @@ export const HomePage = ({ className }: HomePageProps) => {
 
     return (
         <div className={classNames(styles.root, className)}>
-            <div className={styles.overlay}>
-                <div className={styles.logo}>
-                    <a href="http://robokart.com">
-                        <LogoSvg className={styles.logo} />
-                    </a>
-                </div>
-                {/*<div className={styles.title}>Bharat Tec</div>*/}
-                <div className={styles.paragraph}>
-                    <div className={styles.text}>Innovate. Inspire. Ignite.</div>
-                </div>
-                <div className={styles.gradient}></div>
-                {/*
-                <div className={styles.buttons}>
-                    {[1, 5, 10, 15].map((percentage, index) => (
-                        <button
-                            key={index}
-                            className={classNames(styles.button, {
-                                [styles.disabled]: !enabledButtons.includes(percentage),
-                            })}
-                            onClick={() => handlePlayToPercentage(percentage, percentage)}
-                            disabled={!enabledButtons.includes(percentage)}
-                        >
-                            Go to {percentage}%
-                        </button>
-                    ))}
-                </div>
-                */}
-                <video ref={videoRef} className={styles.video} src={videoSrc} autoPlay muted loop />
+            <div className={styles.logo}>
+                    <LogoSvg className={styles.logo} />
             </div>
-            <div className={styles.gradient}></div>
+            <div className={styles.paragraph}>
+                <div className={styles.text}>Innovate. Inspire. Ignite.</div>
+            </div>
+            <div>
+                <div className={styles.gradient_TopToBot}></div>
+                <video
+                    ref={videoRef}
+                    className={styles.video}
+                    src={videoSrc}
+                    autoPlay
+                    muted
+                    loop
+                ></video>
+                <div className={styles.gradient_BotToTop}></div>
+            </div>
         </div>
     );
 };
