@@ -5,12 +5,12 @@ import LogoSvg from '../../assets/Bharat_logo.svg?react';
 import GapSvg from '../../assets/GapBetweenEducation.svg?react';
 import SolutionSvg from '../../assets/Solutions.svg?react';
 import BuisnessModel from '../../assets/BuisnessModel.svg?react';
+import PlaceHolderPerson from '../../assets/PlaceholderPerson.jpg';
 import Ritesh from '../../assets/Ritesh.png';
 import Swapnil from '../../assets/Swapnil.png';
 import Bharat from '../../assets/Bharat.png';
 import Ankita from '../../assets/Ankita.png';
 import Rane from '../../assets/Rane.png';
-import PlaceHolderPerson from '../../assets/PlaceholderPerson.jpg';
 import videoSrc from '../../assets/Demo_Video.mp4';
 
 export default interface HomePageProps {

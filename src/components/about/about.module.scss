@@ -1,41 +1,301 @@
 @import '../../styles/theme.module.scss';
 
 .root {
-    font: $large-font;
-    display: flex;
-    flex-direction: row;
-    background-color: $snow-white;
-    padding-top: 2em;
-    padding-bottom: 3em;
-    justify-content: center;
-    padding-right: 7em;
-    padding-left: 7em;
-    column-gap: 5em;
+  font: $large-font;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0);
+  padding-bottom: 2em;
+  opacity: 1;
+  position: static;
+  column-gap: $mobile-width;
+  flex-wrap: nowrap;
+  row-gap: 1em;
+  padding-top: 4em;
+  padding-right: 4em;
+  padding-left: 4em;
+  width: 100%;
+  height: 100%;
+}
+
+.gradient_TopToBot {
+  position: relative;
+  background-color: transparent; /* Use transparent background */
+  width: 100%; /* Full width */
+  height: 3em; /* Adjust height as needed */
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat; /* Prevent repeating the gradient */
+  background-position: top left; /* Position the gradient starting from the top left */
+  background-size: cover; /* Ensure the gradient covers the entire element */
+  background-clip: padding-box;
+  left: 0px;
+  right: 0px;
+  top: 3em;
+}
+
+.gradient_BotToTop {
+  position: relative;
+  top: -3em;
+  background-color: transparent; /* Use transparent background */
+  width: 100%; /* Full width */ /* Adjust height as needed */
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-repeat: no-repeat; /* Prevent repeating the gradient */
+  background-position: top left; /* Position the gradient starting from the top left */
+  background-size: cover; /* Ensure the gradient covers the entire element */
+  background-clip: padding-box;
+  left: 0px;
+  right: 0px;
+  background-origin: padding-box;
+  background-attachment: scroll;
+  height: 3em;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  flex-direction: row;
+  height: 8em;
+  padding-top: 1em;
+  @media only screen and (max-width: $mobile-width) {
+    height: 4em;
+  }
+}
+
+.video {
+  position: static;
+  top: 20em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  border-radius: 0px;
+  display: inline-block;
 }
 
 .title {
-    font: $title-font;
-    letter-spacing: 0.4rem;
-    width: 20%;
-    height: 100%;
-    max-width: none;
+  font: $title-font;
+  text-align: center;
+  letter-spacing: 0.4rem;
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 2rem;
+  }
+  color: #225675;
+  padding-top: 100px;
+  border-radius: 0px;
+}
+
+.secondary_title {
+  width: 80%;
+  font-weight: 600;
+  line-height: 1.8;
+  color: #225675;
+  font-size: 3rem;
+  text-align: center; /* Center text alignment */
+  letter-spacing: 0.4rem;
+  border-radius: 0; /* Set to 0 */
+  display: flex;
+  flex-direction: column; /* Ensure text is stacked vertically */
+  align-items: center; /* Center the text within the container */
+  justify-content: center; /* Center the text vertically */
+  padding-top: 1.5em;
+  margin: 0 auto; /* Center the container horizontally within its parent */
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
 }
 
 .paragraph {
-    margin-bottom: 1.5em;
-    font: $paragraph-font;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font: $paragraph-font;
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 1rem;
+  }
+  color: #225675;
+  margin-bottom: 2em;
+}
+
+.secondary_paragraph {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  text-align: center; /* Center text within items */
+  color: #356582;
+  margin-bottom: 2em;
+  width: 80%; /* Optional: limits the maximum width */
+  position: relative; /* Ensure it's positioned relative to its parent */
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 1rem;
+  }
+}
+
+.bullet_points {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Ensure bullet points stack vertically */
+  justify-content: center;
+  list-style-type: disc; /* Use bullet points */
+  color: #225675;
+  margin-bottom: 2em;
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 1rem;
+  }
+
+  /* Ensure the list items are centered */
+  li {
+    text-align: center; /* Center text within each list item */
+    margin: 0.5em 0; /* Optional: add space between bullet points */
+    padding: 0.5em;
+  }
+}
+
+.layoutVertical {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font: $paragraph-font;
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 1rem;
+  }
+  color: #225675;
+  margin-bottom: 2em;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.layoutHorizontal {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font: $paragraph-font;
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 0.2rem;
+    flex-direction: column;
+  }
+  color: #225675;
+  margin-bottom: 2em;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 0em 4em;
+}
+
+.layoutProfiles {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font: $paragraph-font;
+
+  color: #225675;
+  margin-bottom: 2em;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 0em 4em;
 }
 
 .text {
-    text-align: start;
-    width: 50vw;
-    margin-top: 3em;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
+  margin-top: 1em;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #225675;
+  font-size: 3rem;
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 1.2rem;
+  }
+}
+
+.button {
+  font: $button-font;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $white;
+  border-radius: 9999px;
+  align-self: center;
+  padding-right: 26px;
+  padding-left: 26px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  &:disabled {
+    pointer-events: none;
+    opacity: 1;
+    background-color: rgba(77, 77, 77, 0.8);
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .image {
-    align-self: center;
-    width: 20vw;
+  align-self: center;
+  width: 100%;
+  z-index: -1;
+  height: 1%;
+  margin-top: -4em;
+  @media only screen and (max-width: $mobile-width) {
+    margin-top: 0em;
+  }
+}
+
+.personContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1em; /* Add margin around each person for spacing */
+  height: 20em;
+  width: 15em;
+}
+
+.Personimage {
+  /* Set a fixed width for the circular image */ /* Set a fixed height to make the image circular */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the circle without distortion */
+  margin-bottom: 1em; /* Space between image and text */
+  z-index: 1; /* Ensure the image is above other elements */
+  border: 3px solid #fff; /* Optional: Add a border for better visibility */
+  @media only screen and (max-width: $mobile-width) {
+    width: 120px; /* Adjust size for smaller screens */
+    height: 120px;
+  }
+  height: 14em;
+  width: 14em;
+}
+
+.personText {
+  font-size: 1.5em; /* Adjust text size as needed */
+  color: #225675; /* Text color */
+  font-weight: 600; /* Bold text for name */
+  margin: 0.5em 0; /* Spacing above and below text */
+}
+
+.personDesignation {
+  font-size: 1em; /* Adjust size for designation */
+  color: #777; /* Lighter color for designation */
+}
+
+.buttons {
+  text-align: center;
+  position: static;
+}
+
+.div1 {
+  font-size: 2em;
 }
