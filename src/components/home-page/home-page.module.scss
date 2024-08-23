@@ -197,6 +197,11 @@
   justify-content: center;
   font: $paragraph-font;
 
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 0.7rem;
+    flex-direction: row;
+  }
+
   color: #225675;
   margin-bottom: 2em;
   flex-direction: row;
