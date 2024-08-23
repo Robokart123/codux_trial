@@ -59,7 +59,14 @@ export const HomePage = ({ className }: HomePageProps) => {
             </div>
             <div>
                 <div className={styles.gradient_TopToBot}></div>
-
+                <video
+                    ref={videoRef}
+                    className={styles.video}
+                    src={videoSrc}
+                    autoPlay
+                    muted
+                    loop
+                ></video>
                 <div className={styles.gradient_BotToTop}></div>
             </div>
             <div className={styles.layoutVertical}>
