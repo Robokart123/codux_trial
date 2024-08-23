@@ -9,9 +9,9 @@ export const routes: RouteObject[] = [
         element: <SiteWrapper />,
         children: [
             { index: true, element: <HomePage /> },
-            { path: '/home', element: <HomePage /> },
+            { path: 'home', element: <HomePage /> },
+            { path: 'about', element: <About /> },
             { path: '*', element: <HomePage /> },  // Fallback route
-            { path: '/about', element: <About /> },
         ],
     },
 ];
