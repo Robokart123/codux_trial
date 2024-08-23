@@ -1,17 +1,26 @@
 import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
+import { Testimonials } from '../testimonials/testimonials';
+import { Products } from '../products/products';
+import DemoVideo from '../../assets/Demo_Video.mp4';
 import styles from './home-page.module.scss';
 import LogoSvg from '../../assets/Bharat_logo.svg?react';
 import GapSvg from '../../assets/GapBetweenEducation.svg?react';
 import SolutionSvg from '../../assets/Solutions.svg?react';
 import BuisnessModel from '../../assets/BuisnessModel.svg?react';
+import Milestones from '../../assets/Milestones.svg?react';
 import PlaceHolderPerson from '../../assets/PlaceholderPerson.jpg';
 import Ritesh from '../../assets/Ritesh.png';
 import Swapnil from '../../assets/Swapnil.png';
 import Bharat from '../../assets/Bharat.png';
 import Ankita from '../../assets/Ankita.png';
 import Rane from '../../assets/Rane.png';
-import videoSrc from '../../assets/Demo_Video.mp4';
+import Shreya from '../../assets/Rane.png';
+import Jyoti from '../../assets/Rane.png';
+import ArNcert from '../../assets/ArNcert.png'
+import ArNcertWorking from '../../assets/ArNcertWorking.png'
+
+import aboutStyles from '../about/about.module.scss';
 
 export default interface HomePageProps {
     className?: string;
@@ -22,7 +31,39 @@ const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, 
 export const HomePage = ({ className }: HomePageProps) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const animationRef = useRef<number | null>(null);
-    const [enabledButtons, setEnabledButtons] = useState<number[]>([1, 5]);
+    const productsData = [
+        {
+            title: 'ArNcert',
+            description: 'Description of Product 1.',
+            imageSrc: [ArNcert, ArNcertWorking, ArNcert], // Array of image URLs
+            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
+        },
+        {
+            title: 'Product 2',
+            description: 'Description of Product 2.',
+            imageSrc: [PlaceHolderPerson, PlaceHolderPerson, PlaceHolderPerson], // Array of image URLs
+            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
+        },
+        // Add more products here
+    ];
+
+    const testimonialsData = [
+        {
+            name: 'Shreya Usankar',
+            designation: 'HEAD - R&D DEPT',
+            feedback:
+                'At Robokart.com, we are proud to partner with Bharat Technology Education Consulting Private Limited (BTECPL) in providing innovative educational solutions to schools. Their expertise in curriculum development and software integration seamlessly complements our high-quality robotics and STEM equipment.',
+            imageSrc: PlaceHolderPerson,
+        },
+        {
+            name: 'Jyoti Sharma',
+            designation: 'Head Education Vertical',
+            feedback:
+                'Bharat Technology Education Consulting Private Limited has been a valuable partner in our mission to equip Indias youth with the skills of the future. BTCPL solutions have enabled us to create world-class learning environments that inspire and empower students. ',
+            imageSrc: PlaceHolderPerson,
+        },
+        // Add more testimonials here
+    ];
 
     useEffect(() => {
         const handleVisibilityChange = () => {
@@ -59,10 +100,10 @@ export const HomePage = ({ className }: HomePageProps) => {
             </div>
             <div>
                 <div className={styles.gradient_TopToBot}></div>
-                <video
+                    <video
                     ref={videoRef}
                     className={styles.video}
-                    src={videoSrc}
+                    src={DemoVideo}
                     autoPlay
                     muted
                     loop
@@ -76,18 +117,25 @@ export const HomePage = ({ className }: HomePageProps) => {
                 <div className={styles.secondary_paragraph}>
                     <ul className={styles.bullet_points}>
                         <li>
-                            There is a noticeable lack of skill-based education in schools, leading
-                            to a gap between academic knowledge and practical skills needed in the
-                            real world.
+                            <div>
+                                There is a noticeable lack of skill-based education in schools,
+                                leading to a gap between academic knowledge and practical skills
+                                needed in the real world.
+                            </div>
                         </li>
                         <li>
-                            We  offer students the opportunity to learn modern life skills by
-                            providing them with instruments and training on contemporary equipment.
+                            <div>
+                                We  offer students the opportunity to learn modern life skills by
+                                providing them with instruments and training on contemporary
+                                equipment.
+                            </div>
                         </li>
                         <li>
-                            The majority of India&apos;s population lives in rural areas. We provide
-                            our technological solutions to these schools to support the sustainable
-                            development of the country.
+                            <div>
+                                The majority of India&apos;s population lives in rural areas. We
+                                provide our technological solutions to these schools to support the
+                                sustainable development of the country.
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -100,17 +148,23 @@ export const HomePage = ({ className }: HomePageProps) => {
                     <div className={styles.secondary_title}>Our Solution</div>
                     <ul className={styles.bullet_points}>
                         <li>
-                            We offer innovative kits specifically designed to make learning
-                            technology easy. Additionally, we provide AR and VR solutions to
-                            simplify the learning of science.
+                            <div className={styles.tertiary_paragraph}>
+                                We offer innovative kits specifically designed to make learning
+                                technology easy. Additionally, we provide AR and VR solutions to
+                                simplify the learning of science.
+                            </div>
                         </li>
                         <li>
-                            Kits and content are designed alongside the NCERT curriculum to
-                            facilitate experiential and practical-based learning.
+                            <div className={styles.tertiary_paragraph}>
+                                Kits and content are designed alongside the NCERT curriculum to
+                                facilitate experiential and practical-based learning.
+                            </div>
                         </li>
                         <li>
-                            We have an in-house team for kit development and content creation,
-                            ensuring that our curriculum and kits are always up to date.
+                            <div className={styles.tertiary_paragraph}>
+                                We have an in-house team for kit development and content creation,
+                                ensuring that our curriculum and kits are always up to date.
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -123,21 +177,26 @@ export const HomePage = ({ className }: HomePageProps) => {
                     <div className={styles.secondary_title}>Business Model </div>
                     <ul className={styles.bullet_points}>
                         <li>
-                            {''}
-                            BTCPL generates revenue through subscription-based software and content
-                            access for schools, direct sales of hardware and kits, consulting and
-                            training services for educational institutions, and licensing
-                            educational content and software to third parties.{''}
+                            <div className={styles.tertiary_paragraph}>
+                                BTCPL generates revenue through subscription-based software and
+                                content access for schools, direct sales of hardware and kits,
+                                consulting and training services for educational institutions, and
+                                licensing educational content and software to third parties.
+                            </div>
                         </li>
                         <li>
-                            BTCPL&apos;s pricing strategy is customer-centric, balancing
-                            affordability with profitability. We will employ a tiered pricing
-                            structure based on the scale of the solution, customer segment, and
-                            value delivered. {' '}
+                            <div className={styles.tertiary_paragraph}>
+                                BTCPL&apos;s pricing strategy is customer-centric, balancing
+                                affordability with profitability. We will employ a tiered pricing
+                                structure based on the scale of the solution, customer segment, and
+                                value delivered. 
+                            </div>
                         </li>
                         <li>
-                            Additionally, we will explore value-based pricing models to capture the
-                            full value proposition.
+                            <div className={styles.tertiary_paragraph}>
+                                Additionally, we will explore value-based pricing models to capture
+                                the full value proposition.
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -177,6 +236,56 @@ export const HomePage = ({ className }: HomePageProps) => {
                         <div className={styles.personDesignation}>CTO</div>
                     </div>
                 </div>
+            </div>
+            <div className={styles.layoutHorizontal}>
+                <div className={styles.secondary_paragraph}>
+                    <div className={styles.secondary_title}> Milestones</div>
+                    <div className={styles.tertiary_title}>Turnover of 9,95,76,149</div>
+                    <ul className={styles.bullet_points}>
+                        <li>
+                            <div className={styles.quaternary_title}>
+                                Atal Tinkering Lab Projcect
+                            </div>
+                            <br />
+                            {
+                                <div className={styles.tertiary_paragraph}>
+                                    Implemented in 60 CBSE schools this project equpped student with
+                                    robotics and coding tools.&apos;
+                                </div>
+                            }
+                        </li>
+                        <li>
+                            <div className={styles.quaternary_title}>Gujcost Department Supply</div>
+                            <br />
+                            {
+                                <div className={styles.tertiary_paragraph}>
+                                    Equipment and devices were supplied to 134 colleges across
+                                    Gujarat, fostering advanced learning.
+                                </div>
+                            }
+                        </li>
+                        <li>
+                            <div className={styles.quaternary_title}>
+                                VJNT Department Robotics &amp; Coding
+                            </div>
+                            <br />
+                            {
+                                <div className={styles.tertiary_paragraph}>
+                                    100 Schools benefited from robotics and coding kits and training
+                                    enhancing STEM education.
+                                </div>
+                            }
+                        </li>
+                    </ul>
+                </div>
+                <div className={styles.image}>
+                    <Milestones className={styles.image} />
+                </div>
+                <Testimonials testimonials={testimonialsData} />
+            </div>
+            <div className={styles.section}>
+                <div className={aboutStyles.secondary_title}>Our Products</div>
+                <Products products={productsData} />
             </div>
         </div>
     );

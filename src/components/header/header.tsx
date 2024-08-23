@@ -40,7 +40,7 @@ export const Header = ({ className }: HeaderProps) => {
             <div className={styles.header}>
                 <div className={styles.logoContainer}>
                     <a
-                        href="http://robokart.com"
+                        href="https://bharatedu.tech"
                         className={classNames(styles.logoLink, styles.logo)}
                     >
                         <LogoSvg className={styles.logo} />
