@@ -91,15 +91,19 @@
   line-height: 1.8;
   color: #225675;
   font-size: 3rem;
-  text-align: center;
+  text-align: center; /* Center text alignment */
   letter-spacing: 0.4rem;
+  border-radius: 0; /* Set to 0 */
+  display: flex;
+  flex-direction: column; /* Ensure text is stacked vertically */
+  align-items: center; /* Center the text within the container */
+  justify-content: center; /* Center the text vertically */
+  padding-top: 1.5em;
+  margin: 0 auto; /* Center the container horizontally within its parent */
 
   @media only screen and (max-width: $mobile-width) {
-    font-size: 3rem;
+    font-size: 2rem; /* Adjust font size for smaller screens */
   }
-  border-radius: 0px;
-  display: flex;
-  padding-top: 1.5em;
 }
 
 .paragraph {
@@ -149,10 +153,11 @@
   li {
     text-align: center; /* Center text within each list item */
     margin: 0.5em 0; /* Optional: add space between bullet points */
+    padding: 0.5em;
   }
 }
 
-.layout {
+.layoutVertical {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -168,12 +173,48 @@
   align-items: center;
 }
 
+.layoutHorizontal {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font: $paragraph-font;
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 0.2rem;
+    flex-direction: column;
+  }
+  color: #225675;
+  margin-bottom: 2em;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 0em 4em;
+}
+
+.layoutProfiles {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font: $paragraph-font;
+
+  color: #225675;
+  margin-bottom: 2em;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 0em 4em;
+}
+
 .text {
+  margin-top: 1em;
   width: 100%;
   font-weight: 400;
   line-height: 1.8;
   color: #225675;
   font-size: 3rem;
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 1.2rem;
+  }
 }
 
 .button {
@@ -208,10 +249,49 @@
     margin-top: 0em;
   }
 }
+
+.personContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1em; /* Add margin around each person for spacing */
+  height: 20em;
+  width: 15em;
+}
+
+.Personimage {
+  /* Set a fixed width for the circular image */ /* Set a fixed height to make the image circular */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the circle without distortion */
+  margin-bottom: 1em; /* Space between image and text */
+  z-index: 1; /* Ensure the image is above other elements */
+  border: 3px solid #fff; /* Optional: Add a border for better visibility */
+  @media only screen and (max-width: $mobile-width) {
+    width: 120px; /* Adjust size for smaller screens */
+    height: 120px;
+  }
+  height: 14em;
+  width: 14em;
+}
+
+.personText {
+  font-size: 1.5em; /* Adjust text size as needed */
+  color: #225675; /* Text color */
+  font-weight: 600; /* Bold text for name */
+  margin: 0.5em 0; /* Spacing above and below text */
+}
+
+.personDesignation {
+  font-size: 1em; /* Adjust size for designation */
+  color: #777; /* Lighter color for designation */
+}
+
 .buttons {
   text-align: center;
   position: static;
 }
+
 .div1 {
   font-size: 2em;
 }
