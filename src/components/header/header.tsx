@@ -48,10 +48,10 @@ export const Header = ({ className }: HeaderProps) => {
                 </div>
                 <div className={styles.Info}>
                     <div>
-                        <Link to="/example_home">Home</Link>
+                        <Link to="/home">Home</Link>
                     </div>
                     <div>
-                        <Link to="/example_about">About</Link>
+                        <Link to="/about">About</Link>
                     </div>
                 </div>
             </div>
