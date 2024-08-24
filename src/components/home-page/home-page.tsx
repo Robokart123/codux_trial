@@ -19,6 +19,10 @@ import Shreya from '../../assets/Rane.png';
 import Jyoti from '../../assets/Rane.png';
 import ArNcert from '../../assets/ArNcert.png';
 import ArNcertWorking from '../../assets/ArNcertWorking.png';
+import VrStandalone from '../../assets/VrStandalone.png';
+import InteractiveCharts from '../../assets/InteractiveCharts.png';
+import TalkingPen from '../../assets/TalkingPen.png';
+import ArCards from '../../assets/ArCards.png';
 
 import aboutStyles from '../about/about.module.scss';
 
@@ -36,26 +40,31 @@ export const HomePage = ({ className }: HomePageProps) => {
         {
             title: 'ArNcert',
             description: 'An AR mobile phone application based on NCERT Syllabus.',
-            imageSrc: [ArNcert, ArNcertWorking, ArNcert], // Array of image URLs
-            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
-            
+            imageSrc: [ArNcertWorking, ArNcert], // Array of image URLs
+            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL           
         },
         {
-            title: 'VR Headset (Standalone)',
+            title: 'VR Content',
             description: '250 immersive 3D experience video Based on NCERT syllabus',
-            imageSrc: [PlaceHolderPerson, PlaceHolderPerson, PlaceHolderPerson], // Array of image URLs
-            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
+            imageSrc: [VrStandalone], // Array of image URLs
+            videoSrc: 'https://www.youtube.com/watch?v=O25hsHASQcE&list=PLzjo4rzOE3yoW-LnS8LCrrVEIpfEGYE0I', // Example video URL
         },
         {
             title: 'AR interactive charts',
             description: ' AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
-            imageSrc: [PlaceHolderPerson, PlaceHolderPerson, PlaceHolderPerson], // Array of image URLs
+            imageSrc: [InteractiveCharts], // Array of image URLs
             videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
         },
         {
-            title: 'Interactive talking pen charts',
-            description: ' AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
-            imageSrc: [PlaceHolderPerson, PlaceHolderPerson, PlaceHolderPerson], // Array of image URLs
+            title: 'Talking pen charts',
+            description: ' Interactive charts include 10 different charts each packed with rich information covering diverse subjects',
+            imageSrc: [TalkingPen], // Array of image URLs
+            videoSrc: 'https://drive.google.com/uc?id=1prbEZqo2IGdSttR94KoXQMYOcLZ6yK3f', // Example video URL
+        },
+        {
+            title: 'AR Flashcards',
+            description: '26 Alphabet Cards, 48 Varnamala Cards, 31 Number Cards,13 Shapes and Color Cards.',
+            imageSrc: [ArCards], // Array of image URLs
             videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
         },
         // Add more products here
