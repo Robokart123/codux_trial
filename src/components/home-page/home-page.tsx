@@ -37,36 +37,38 @@ export const HomePage = ({ className }: HomePageProps) => {
     const animationRef = useRef<number | null>(null);
     const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
     const productsData = [
-        {
-            title: 'ArNcert',
-            description: 'An AR mobile phone application based on NCERT Syllabus.',
-            imageSrc: [ArNcertWorking, ArNcert], // Array of image URLs
-            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL           
-        },
+
         {
             title: 'VR Content',
             description: '250 immersive 3D experience video Based on NCERT syllabus',
             imageSrc: [VrStandalone], // Array of image URLs
-            videoSrc: 'https://www.youtube.com/watch?v=O25hsHASQcE&list=PLzjo4rzOE3yoW-LnS8LCrrVEIpfEGYE0I', // Example video URL
-        },
-        {
-            title: 'AR interactive charts',
-            description: ' AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
-            imageSrc: [InteractiveCharts], // Array of image URLs
-            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
-        },
-        {
-            title: 'Talking pen charts',
-            description: ' Interactive charts include 10 different charts each packed with rich information covering diverse subjects',
-            imageSrc: [TalkingPen], // Array of image URLs
-            videoSrc: 'https://drive.google.com/uc?id=1prbEZqo2IGdSttR94KoXQMYOcLZ6yK3f', // Example video URL
+            videoSrc: 'https://drive.google.com/file/d/1yK7A8SslUzTKQ0ECvheAkIR-RccwzuOa/preview', // Example video URL
         },
         {
             title: 'AR Flashcards',
             description: '26 Alphabet Cards, 48 Varnamala Cards, 31 Number Cards,13 Shapes and Color Cards.',
             imageSrc: [ArCards], // Array of image URLs
-            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
+            videoSrc: 'https://drive.google.com/file/d/1vD9ZDozyyVTnHc0DzfDCQ_HmMy_JRJCK/preview', // Example video URL
         },
+        {
+            title: 'Talking pen charts',
+            description: ' Interactive charts include 10 different charts each packed with rich information covering diverse subjects',
+            imageSrc: [TalkingPen], // Array of image URLs
+            videoSrc: 'https://drive.google.com/file/d/1prbEZqo2IGdSttR94KoXQMYOcLZ6yK3f/preview', // Example video URL
+        },
+        {
+            title: 'AR interactive charts',
+            description: 'AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
+            imageSrc: [InteractiveCharts], // Array of image URLs
+            videoSrc: 'https://drive.google.com/file/d/1QSF2EVKchJD4g17tYCiApPatic_w20Hg/preview', // Example video URL
+        },
+        {
+            title: 'ArNcert',
+            description: 'An AR mobile phone application based on NCERT Syllabus.',
+            imageSrc: [ArNcertWorking, ArNcert], // Array of image URLs
+            videoSrc: 'https://drive.google.com/file/d/1FmxGkH-o6pND_b9fYscckGitzCCu6D6A/preview', // Example video URL           
+        },
+
         // Add more products here
     ];
 
