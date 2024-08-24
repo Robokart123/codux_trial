@@ -13,6 +13,7 @@ interface TestimonialsProps {
 }
 
 export const Testimonials = ({ testimonials }: TestimonialsProps) => {
+    
     return (
         <section className={styles.testimonialsSection}>
             <h2 className={styles.title}>What Our Clients Say</h2>
