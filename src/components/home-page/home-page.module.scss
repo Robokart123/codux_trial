@@ -17,8 +17,7 @@
 .gradient_TopToBot {
   position: relative;
   background-color: transparent; /* Use transparent background */
-  width: 100%; /* Full width */
-  height: 3em; /* Adjust height as needed */
+  width: 100%; /* Full width */ /* Adjust height as needed */
   box-sizing: border-box; /* Include padding and borders in the element's total width and height */
   background-image: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat; /* Prevent repeating the gradient */
@@ -27,12 +26,12 @@
   background-clip: padding-box;
   left: 0px;
   right: 0px;
-  top: 3em;
+  height: 5em;
+  top: 5em;
 }
 
 .gradient_BotToTop {
   position: relative;
-  top: -3em;
   background-color: transparent; /* Use transparent background */
   width: 100%; /* Full width */ /* Adjust height as needed */
   box-sizing: border-box; /* Include padding and borders in the element's total width and height */
@@ -45,7 +44,8 @@
   right: 0px;
   background-origin: padding-box;
   background-attachment: scroll;
-  height: 3em;
+  height: 5em;
+  top: -5em;
 }
 
 .logo {

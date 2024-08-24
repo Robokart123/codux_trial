@@ -2,8 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { Testimonials } from '../testimonials/testimonials';
 import { Products } from '../products/products';
-import DemoVideo from '../../assets/Demo_Video.mp4';
 import styles from './home-page.module.scss';
+import DemoVideo from '../../assets/Demo_Video.mp4';
 import LogoSvg from '../../assets/Bharat_logo.svg?react';
 import GapSvg from '../../assets/GapBetweenEducation.svg?react';
 import SolutionSvg from '../../assets/Solutions.svg?react';
@@ -17,8 +17,8 @@ import Ankita from '../../assets/Ankita.png';
 import Rane from '../../assets/Rane.png';
 import Shreya from '../../assets/Rane.png';
 import Jyoti from '../../assets/Rane.png';
-import ArNcert from '../../assets/ArNcert.png'
-import ArNcertWorking from '../../assets/ArNcertWorking.png'
+import ArNcert from '../../assets/ArNcert.png';
+import ArNcertWorking from '../../assets/ArNcertWorking.png';
 
 import aboutStyles from '../about/about.module.scss';
 
@@ -31,16 +31,30 @@ const clamp = (num: number, min: number, max: number) => Math.min(Math.max(num, 
 export const HomePage = ({ className }: HomePageProps) => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const animationRef = useRef<number | null>(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
     const productsData = [
         {
             title: 'ArNcert',
-            description: 'Description of Product 1.',
+            description: 'An AR mobile phone application based on NCERT Syllabus.',
             imageSrc: [ArNcert, ArNcertWorking, ArNcert], // Array of image URLs
+            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
+            
+        },
+        {
+            title: 'VR Headset (Standalone)',
+            description: '250 immersive 3D experience video Based on NCERT syllabus',
+            imageSrc: [PlaceHolderPerson, PlaceHolderPerson, PlaceHolderPerson], // Array of image URLs
             videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
         },
         {
-            title: 'Product 2',
-            description: 'Description of Product 2.',
+            title: 'AR interactive charts',
+            description: ' AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
+            imageSrc: [PlaceHolderPerson, PlaceHolderPerson, PlaceHolderPerson], // Array of image URLs
+            videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
+        },
+        {
+            title: 'Interactive talking pen charts',
+            description: ' AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
             imageSrc: [PlaceHolderPerson, PlaceHolderPerson, PlaceHolderPerson], // Array of image URLs
             videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Example video URL
         },
@@ -98,16 +112,10 @@ export const HomePage = ({ className }: HomePageProps) => {
             <div className={styles.paragraph}>
                 <div className={styles.text}>Innovate. Inspire. Ignite.</div>
             </div>
-            <div>
+            <div className={styles.layoutVertical}>
+                <div className={styles.tertiary_title}>Our Content</div>
                 <div className={styles.gradient_TopToBot}></div>
-                    <video
-                    ref={videoRef}
-                    className={styles.video}
-                    src={DemoVideo}
-                    autoPlay
-                    muted
-                    loop
-                ></video>
+
                 <div className={styles.gradient_BotToTop}></div>
             </div>
             <div className={styles.layoutVertical}>
