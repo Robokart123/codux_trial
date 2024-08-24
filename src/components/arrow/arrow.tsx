@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { VisibilityContext } from 'react-horizontal-scrolling-menu';
-import styles from './Arrow.module.scss'; // Create your own styling for arrows
+import styles from './arrow.module.scss'; // Create your own styling for arrows
 
 interface ArrowProps {
     direction: 'left' | 'right';

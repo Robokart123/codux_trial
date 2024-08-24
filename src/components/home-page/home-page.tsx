@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { Testimonials } from '../testimonials/testimonials';
 import { Products } from '../products/products';
 import styles from './home-page.module.scss';
-import DemoVideo from '../../assets/Demo_Video.mp4';
+import DemoVideo from '../../assets/Demo_Video.webm';
 import LogoSvg from '../../assets/Bharat_logo.svg?react';
 import GapSvg from '../../assets/GapBetweenEducation.svg?react';
 import SolutionSvg from '../../assets/Solutions.svg?react';
@@ -115,7 +115,14 @@ export const HomePage = ({ className }: HomePageProps) => {
             <div className={styles.layoutVertical}>
                 <div className={styles.tertiary_title}>Our Content</div>
                 <div className={styles.gradient_TopToBot}></div>
-
+                <video
+                    ref={videoRef}
+                    className={styles.video}
+                    src={DemoVideo}
+                    autoPlay
+                    muted
+                    loop
+                ></video>
                 <div className={styles.gradient_BotToTop}></div>
             </div>
             <div className={styles.layoutVertical}>
