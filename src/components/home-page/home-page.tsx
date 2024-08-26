@@ -42,7 +42,7 @@ export const HomePage = ({ className }: HomePageProps) => {
             title: 'VR Content',
             description: '250 immersive 3D experience video Based on NCERT syllabus',
             imageSrc: [VrStandalone], // Array of image URLs
-            videoSrc: 'https://drive.google.com/file/d/1yK7A8SslUzTKQ0ECvheAkIR-RccwzuOa/preview', // Example video URL
+            videoSrc: 'https://drive.google.com/file/d/1Ia-eCU-Hox7rJc9rb3y05yLhhPrpT4dJ/preview', // Example video URL
         },
         {
             title: 'AR Flashcards',

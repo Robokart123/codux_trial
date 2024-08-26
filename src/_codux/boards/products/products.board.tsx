@@ -17,7 +17,7 @@ const mockProductsData: Product[] = [
         imageSrc: [
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
-            'https://via.placeholder.com/300'
+            'https://via.placeholder.com/300',
         ],
         videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     },
@@ -27,27 +27,29 @@ const mockProductsData: Product[] = [
         imageSrc: [
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
-            'https://via.placeholder.com/300'
+            'https://via.placeholder.com/300',
         ],
         videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     },
     {
         title: 'AR Interactive Charts',
-        description: 'AR Interactive Charts mobile phone app which allows users to scan interactive charts.',
+        description:
+            'AR Interactive Charts mobile phone app which allows users to scan interactive charts.',
         imageSrc: [
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
-            'https://via.placeholder.com/300'
+            'https://via.placeholder.com/300',
         ],
         videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     },
     {
         title: 'Interactive Talking Pen Charts',
-        description: 'AR Interactive Charts mobile phone app which allows users to scan interactive charts.',
+        description:
+            'AR Interactive Charts mobile phone app which allows users to scan interactive charts.',
         imageSrc: [
             'https://via.placeholder.com/300',
             'https://via.placeholder.com/300',
-            'https://via.placeholder.com/300'
+            'https://via.placeholder.com/300',
         ],
         videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     },
@@ -57,4 +59,8 @@ export default createBoard({
     name: 'Products',
     Board: () => <Products products={mockProductsData} />,
     isSnippet: true,
+    environmentProps: {
+        windowWidth: 1024,
+        windowHeight: 768,
+    },
 });
