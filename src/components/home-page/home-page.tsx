@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import classNames from 'classnames';
-import { Testimonials } from '../testimonials/testimonials';
 import { Products } from '../products/products';
 import styles from './home-page.module.scss';
 import DemoVideo from '../../assets/Demo_Video.webm';
@@ -10,11 +9,6 @@ import SolutionSvg from '../../assets/Solutions.svg?react';
 import BuisnessModel from '../../assets/BuisnessModel.svg?react';
 import Milestones from '../../assets/Milestones.svg?react';
 import PlaceHolderPerson from '../../assets/PlaceholderPerson.jpg';
-import Ritesh from '../../assets/Ritesh.png';
-import Swapnil from '../../assets/Swapnil.png';
-import Bharat from '../../assets/Bharat.png';
-import Ankita from '../../assets/Ankita.png';
-import Rane from '../../assets/Rane.png';
 import Shreya from '../../assets/Rane.png';
 import Jyoti from '../../assets/Rane.png';
 import ArNcert from '../../assets/ArNcert.png';
@@ -37,7 +31,6 @@ export const HomePage = ({ className }: HomePageProps) => {
     const animationRef = useRef<number | null>(null);
     const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
     const productsData = [
-
         {
             title: 'VR Content',
             description: '250 immersive 3D experience video Based on NCERT syllabus',
@@ -46,19 +39,22 @@ export const HomePage = ({ className }: HomePageProps) => {
         },
         {
             title: 'AR Flashcards',
-            description: '26 Alphabet Cards, 48 Varnamala Cards, 31 Number Cards,13 Shapes and Color Cards.',
+            description:
+                '26 Alphabet Cards, 48 Varnamala Cards, 31 Number Cards,13 Shapes and Color Cards.',
             imageSrc: [ArCards], // Array of image URLs
             videoSrc: 'https://drive.google.com/file/d/1vD9ZDozyyVTnHc0DzfDCQ_HmMy_JRJCK/preview', // Example video URL
         },
         {
             title: 'Talking pen charts',
-            description: ' Interactive charts include 10 different charts each packed with rich information covering diverse subjects',
+            description:
+                ' Interactive charts include 10 different charts each packed with rich information covering diverse subjects',
             imageSrc: [TalkingPen], // Array of image URLs
             videoSrc: 'https://drive.google.com/file/d/1prbEZqo2IGdSttR94KoXQMYOcLZ6yK3f/preview', // Example video URL
         },
         {
             title: 'AR interactive charts',
-            description: 'AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
+            description:
+                'AR Interactive Charts mobile phone app whcih allows users to scan the Interactive charts',
             imageSrc: [InteractiveCharts], // Array of image URLs
             videoSrc: 'https://drive.google.com/file/d/1QSF2EVKchJD4g17tYCiApPatic_w20Hg/preview', // Example video URL
         },
@@ -66,7 +62,7 @@ export const HomePage = ({ className }: HomePageProps) => {
             title: 'ArNcert',
             description: 'An AR mobile phone application based on NCERT Syllabus.',
             imageSrc: [ArNcertWorking, ArNcert], // Array of image URLs
-            videoSrc: 'https://drive.google.com/file/d/1FmxGkH-o6pND_b9fYscckGitzCCu6D6A/preview', // Example video URL           
+            videoSrc: 'https://drive.google.com/file/d/1FmxGkH-o6pND_b9fYscckGitzCCu6D6A/preview', // Example video URL
         },
 
         // Add more products here
@@ -230,39 +226,6 @@ export const HomePage = ({ className }: HomePageProps) => {
                     <BuisnessModel className={styles.image} />
                 </div>
             </div>
-            <div className={styles.layoutVertical}>
-                <div className={styles.secondary_title}>Our Core Team</div>
-                <div className={styles.secondary_paragraph}></div>
-                <div className={styles.layoutProfiles}>
-                    <div className={styles.personContainer}>
-                        <img src={Ritesh} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Ritesh Shah</div>
-                        <div className={styles.personDesignation}>Founder & CEO</div>
-                    </div>
-                </div>
-                <div className={styles.layoutProfiles}>
-                    <div className={styles.personContainer}>
-                        <img src={Swapnil} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Swapnil Jani</div>
-                        <div className={styles.personDesignation}>CMO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Bharat} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Bharat Shah</div>
-                        <div className={styles.personDesignation}>CPO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Ankita} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Ankita Maral</div>
-                        <div className={styles.personDesignation}>COO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Rane} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Abhishek Rane</div>
-                        <div className={styles.personDesignation}>CTO</div>
-                    </div>
-                </div>
-            </div>
             <div className={styles.layoutHorizontal}>
                 <div className={styles.secondary_paragraph}>
                     <div className={styles.secondary_title}> Milestones</div>
@@ -307,7 +270,6 @@ export const HomePage = ({ className }: HomePageProps) => {
                 <div className={styles.image}>
                     <Milestones className={styles.image} />
                 </div>
-                <Testimonials testimonials={testimonialsData} />
             </div>
             <div className={styles.section}>
                 <div className={aboutStyles.secondary_title}>Our Products</div>
