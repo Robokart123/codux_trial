@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "homepage": "./",
   "type": "module",
+  "engines": {
+    "node": "26.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -24,7 +27,7 @@
   "devDependencies": {
     "@codux-boards/react-blueprint": "^1.0.14",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^26.x",
+    "@types/node": "^22.0.0",
     "@types/react": "17",
     "@types/react-dom": "17",
     "@vitejs/plugin-react": "^4.3.1",
