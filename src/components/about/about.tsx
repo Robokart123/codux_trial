@@ -5,6 +5,8 @@ import Swapnil from '../../assets/Swapnil.png';
 import Bharat from '../../assets/Bharat.png';
 import Ankita from '../../assets/Ankita.png';
 import Rane from '../../assets/Rane.png';
+import Chaitali from '../../assets/chaitali.png';
+import Rahul from '../../assets/rahul.png';
 import PlaceHolderPerson from '../../assets/PlaceholderPerson.jpg';
 
 export interface AboutProps {
@@ -36,7 +38,17 @@ export const About = ({ className }: AboutProps) => {
                     <div className={styles.personContainer}>
                         <img src={Ritesh} alt={PlaceHolderPerson} className={styles.Personimage} />
                         <div className={styles.personText}>Ritesh Shah</div>
-                        <div className={styles.personDesignation}>Founder & CEO</div>
+                        <div className={styles.personDesignation}>Director</div>
+                    </div>
+                                        <div className={styles.personContainer}>
+                        <img src={Chaitali} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Chaitali Shah</div>
+                        <div className={styles.personDesignation}>Director</div>
+                    </div>
+                                        <div className={styles.personContainer}>
+                        <img src={Rahul} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Rahula Jha</div>
+                        <div className={styles.personDesignation}>Director</div>
                     </div>
                 </div>
                 <div className={styles.layoutProfiles}>
@@ -65,3 +77,4 @@ export const About = ({ className }: AboutProps) => {
         </div>
     );
 };
+
