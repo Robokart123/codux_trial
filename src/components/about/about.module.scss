@@ -193,25 +193,6 @@
   padding: 0em 4em;
 }
 
-.layoutProfiles {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font: $paragraph-font;
-
-  @media only screen and (max-width: $mobile-width) {
-    font-size: 0.7rem;
-    flex-direction: row;
-  }
-
-  color: #225675;
-  margin-bottom: 2em;
-  flex-direction: row;
-  width: 100%;
-  align-items: center;
-  padding: 0em 4em;
-}
-
 .text {
   margin-top: 1em;
   width: 100%;
@@ -257,36 +238,52 @@
   }
 }
 
+.layoutProfiles {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; // rows wrap instead of overflowing
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(0.5em, 2vw, 2em);
+  font: $paragraph-font;
+  color: #225675;
+  margin-bottom: 2em;
+  width: 100%;
+  padding: 0 clamp(0.5em, 4vw, 4em);
+
+  @media only screen and (max-width: $mobile-width) {
+    font-size: 0.7rem;
+  }
+}
+
 .personContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 1em; /* Add margin around each person for spacing */
-  height: 20em;
-  width: 15em;
+  margin: 0; // spacing now comes from gap
+  // card width scales with the screen: 8em min, 15em max
+  width: clamp(8em, 22vw, 15em);
+  height: auto;
 }
 
 .Personimage {
-  /* Set a fixed width for the circular image */ /* Set a fixed height to make the image circular */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Ensure the image covers the circle without distortion */
-  margin-bottom: 1em; /* Space between image and text */
-  z-index: 1; /* Ensure the image is above other elements */
-  border: 3px solid #fff; /* Optional: Add a border for better visibility */
-  @media only screen and (max-width: $mobile-width) {
-    width: 120px; /* Adjust size for smaller screens */
-    height: 120px;
-  }
-  height: 14em;
-  width: 14em;
+  width: 100%; // fills the card, so it scales with it
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  z-index: 1;
+  border: 3px solid #fff;
 }
 
 .personText {
-  font-size: 1.5em; /* Adjust text size as needed */
-  color: #225675; /* Text color */
-  font-weight: 600; /* Bold text for name */
-  margin: 0.5em 0; /* Spacing above and below text */
+  font-size: clamp(1em, 1.6vw, 1.5em);
+  color: #225675;
+  font-weight: 600;
+  margin: 0.5em 0;
 }
 
 .personDesignation {
