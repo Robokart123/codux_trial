@@ -73,7 +73,7 @@ export const About = ({ className }: AboutProps) => {
                         <div className={styles.personText}>Jay Prakash</div>
                         <div className={styles.personDesignation}>CFO</div>
                     </div>
-                                    
+                 </div>                   
             </div>
         </div>
     );
