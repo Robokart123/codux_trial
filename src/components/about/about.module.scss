@@ -242,15 +242,16 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; // rows wrap instead of overflowing
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: clamp(0.5em, 2vw, 2em);
+  gap: 1.5em clamp(0.5em, 2vw, 2em);
   font: $paragraph-font;
   color: #225675;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   width: 100%;
-  padding: 0 clamp(0.5em, 4vw, 4em);
+  padding: 0 1em; // was 0 4em, which wasted space on phones
+  box-sizing: border-box;
 
   @media only screen and (max-width: $mobile-width) {
     font-size: 0.7rem;
@@ -262,33 +263,33 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0; // spacing now comes from gap
-  // card width scales with the screen: 8em min, 15em max
-  width: clamp(8em, 22vw, 15em);
+  margin: 0;
   height: auto;
+  // about 3 per row on phones, up to 5 per row on desktop
+  width: clamp(6.5em, 28vw, 15em);
 }
 
 .Personimage {
-  width: 100%; // fills the card, so it scales with it
-  aspect-ratio: 1 / 1;
+  width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1em;
-  z-index: 1;
+  margin-bottom: 0.8em;
   border: 3px solid #fff;
 }
 
 .personText {
-  font-size: clamp(1em, 1.6vw, 1.5em);
-  color: #225675;
+  font-size: clamp(0.85em, 1.6vw, 1.5em);
   font-weight: 600;
-  margin: 0.5em 0;
+  color: #225675;
+  margin: 0.4em 0;
+  overflow-wrap: anywhere; // long names wrap instead of getting cut
 }
 
 .personDesignation {
-  font-size: 1em; /* Adjust size for designation */
-  color: #777; /* Lighter color for designation */
+  font-size: clamp(0.7em, 1.2vw, 1em);
+  color: #777;
 }
 
 .buttons {
