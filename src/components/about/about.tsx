@@ -51,28 +51,6 @@ export const About = ({ className }: AboutProps) => {
                         <div className={styles.personDesignation}>Director</div>
                     </div>
                 </div>
-                <div className={styles.layoutProfiles}>
-                    <div className={styles.personContainer}>
-                        <img src={Swapnil} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Swapnil Jani</div>
-                        <div className={styles.personDesignation}>CMO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Bharat} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Bharat Shah</div>
-                        <div className={styles.personDesignation}>CPO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Ankita} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Ankita Maral</div>
-                        <div className={styles.personDesignation}>COO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Rane} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Abhishek Rane</div>
-                        <div className={styles.personDesignation}>CTO</div>
-                    </div>
-                </div>
             </div>
         </div>
     );
