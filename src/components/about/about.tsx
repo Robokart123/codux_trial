@@ -43,7 +43,7 @@ export const About = ({ className }: AboutProps) => {
                     </div>
                     <div className={styles.personContainer}>
                         <img src={Rahul} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Rahula Jha</div>
+                        <div className={styles.personText}>Rahul Jha</div>
                         <div className={styles.personDesignation}>Director</div>
                     </div>
                 </div>
