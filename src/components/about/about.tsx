@@ -5,7 +5,6 @@ import Swapnil from '../../assets/Swapnil_1.png';
 import Bharat from '../../assets/Bharat.png';
 import Ankita from '../../assets/Ankita_1.png';
 import Rane from '../../assets/Rane_2.png';
-import Chaitali from '../../assets/chaitali.png';
 import Rahul from '../../assets/rahul.png';
 import JP from '../../assets/JP.png';
 import PlaceHolderPerson from '../../assets/PlaceholderPerson.jpg';
@@ -14,11 +13,26 @@ export interface AboutProps {
     className?: string;
 }
 
+interface Person {
+    name: string;
+    designation: string;
+    image: string;
+}
 
-/**
- * This component was created using Codux's Default new component template.
- * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
- */
+// Each inner array is one row. Add or remove people freely.
+const teamRows: Person[][] = [
+    [
+        { name: 'Ritesh Shah', designation: 'Director', image: Ritesh },
+        { name: 'Rahul Jha', designation: 'Director', image: Rahul },
+    ],
+    [
+        { name: 'Swapnil Jani', designation: 'CMO', image: Swapnil },
+        { name: 'Ankita Maral', designation: 'COO', image: Ankita },
+        { name: 'Abhishek Rane', designation: 'CTO', image: Rane },
+        { name: 'Jay Prakash', designation: 'CFO', image: JP },
+        { name: 'Bharat Shah', designation: 'CPO', image: Bharat },
+    ],
+];
 
 export const About = ({ className }: AboutProps) => {
     return (
@@ -35,47 +49,25 @@ export const About = ({ className }: AboutProps) => {
             <div className={styles.layoutVertical}>
                 <div className={styles.secondary_title}>Our Core Team</div>
                 <div className={styles.secondary_paragraph}></div>
-                <div className={styles.layoutProfiles}>
-                    <div className={styles.personContainer}>
-                        <img src={Ritesh} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Ritesh Shah</div>
-                        <div className={styles.personDesignation}>Director</div>
+                {teamRows.map((row, i) => (
+                    <div className={styles.layoutProfiles} key={i}>
+                        {row.map((p) => (
+                            <div className={styles.personContainer} key={p.name}>
+                                <img
+                                    src={p.image}
+                                    alt={p.name}
+                                    className={styles.Personimage}
+                                    onError={(e) => {
+                                        e.currentTarget.src = PlaceHolderPerson;
+                                    }}
+                                />
+                                <div className={styles.personText}>{p.name}</div>
+                                <div className={styles.personDesignation}>{p.designation}</div>
+                            </div>
+                        ))}
                     </div>
-                    <div className={styles.personContainer}>
-                        <img src={Rahul} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Rahul Jha</div>
-                        <div className={styles.personDesignation}>Director</div>
-                    </div>
-                </div>
-                    <div className={styles.layoutProfiles}>
-                    <div className={styles.personContainer}>
-                        <img src={Swapnil} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Swapnil Jani</div>
-                        <div className={styles.personDesignation}>CMO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Ankita} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Ankita Maral</div>
-                        <div className={styles.personDesignation}>COO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Rane} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Abhishek Rane</div>
-                        <div className={styles.personDesignation}>CTO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={JP} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Jay Prakash</div>
-                        <div className={styles.personDesignation}>CFO</div>
-                    </div>
-                    <div className={styles.personContainer}>
-                        <img src={Bharat} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Bharat Shah</div>
-                        <div className={styles.personDesignation}>CPO</div>
-                    </div>
-                 </div>                   
+                ))}
             </div>
         </div>
     );
 };
-
