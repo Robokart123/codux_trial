@@ -49,11 +49,6 @@ export const About = ({ className }: AboutProps) => {
                 </div>
                     <div className={styles.layoutProfiles}>
                     <div className={styles.personContainer}>
-                        <img src={Bharat} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Bharat Shah</div>
-                        <div className={styles.personDesignation}>CPO</div>
-                    </div>
-                    <div className={styles.personContainer}>
                         <img src={Swapnil} alt={PlaceHolderPerson} className={styles.Personimage} />
                         <div className={styles.personText}>Swapnil Jani</div>
                         <div className={styles.personDesignation}>CMO</div>
@@ -72,6 +67,11 @@ export const About = ({ className }: AboutProps) => {
                         <img src={JP} alt={PlaceHolderPerson} className={styles.Personimage} />
                         <div className={styles.personText}>Jay Prakash</div>
                         <div className={styles.personDesignation}>CFO</div>
+                    </div>
+                    <div className={styles.personContainer}>
+                        <img src={Bharat} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Bharat Shah</div>
+                        <div className={styles.personDesignation}>CPO</div>
                     </div>
                  </div>                   
             </div>
