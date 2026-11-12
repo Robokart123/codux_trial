@@ -4,9 +4,10 @@ import Ritesh from '../../assets/Ritesh.png';
 import Swapnil from '../../assets/Swapnil.png';
 import Bharat from '../../assets/Bharat.png';
 import Ankita from '../../assets/Ankita.png';
-import Rane from '../../assets/Rane.png';
+import Rane from '../../assets/Rane_2.png';
 import Chaitali from '../../assets/chaitali.png';
 import Rahul from '../../assets/rahul.png';
+import JP from '../../assets/JP.png';
 import PlaceHolderPerson from '../../assets/PlaceholderPerson.jpg';
 
 export interface AboutProps {
@@ -40,17 +41,39 @@ export const About = ({ className }: AboutProps) => {
                         <div className={styles.personText}>Ritesh Shah</div>
                         <div className={styles.personDesignation}>Director</div>
                     </div>
-                                        <div className={styles.personContainer}>
-                        <img src={Chaitali} alt={PlaceHolderPerson} className={styles.Personimage} />
-                        <div className={styles.personText}>Chaitali Shah</div>
-                        <div className={styles.personDesignation}>Director</div>
-                    </div>
-                                        <div className={styles.personContainer}>
+                    <div className={styles.personContainer}>
                         <img src={Rahul} alt={PlaceHolderPerson} className={styles.Personimage} />
                         <div className={styles.personText}>Rahula Jha</div>
                         <div className={styles.personDesignation}>Director</div>
                     </div>
                 </div>
+                    <div className={styles.layoutProfiles}>
+                    <div className={styles.personContainer}>
+                        <img src={Bharat} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Bharat Shah</div>
+                        <div className={styles.personDesignation}>CPO</div>
+                    </div>
+                    <div className={styles.personContainer}>
+                        <img src={Swapnil} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Swapnil Jani</div>
+                        <div className={styles.personDesignation}>CMO</div>
+                    </div>
+                    <div className={styles.personContainer}>
+                        <img src={Ankita} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Ankita Maral</div>
+                        <div className={styles.personDesignation}>COO</div>
+                    </div>
+                    <div className={styles.personContainer}>
+                        <img src={Rane} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Abhishek Rane</div>
+                        <div className={styles.personDesignation}>CTO</div>
+                    </div>
+                    <div className={styles.personContainer}>
+                        <img src={JP} alt={PlaceHolderPerson} className={styles.Personimage} />
+                        <div className={styles.personText}>Jay Prakash</div>
+                        <div className={styles.personDesignation}>CFO</div>
+                    </div>
+                                    
             </div>
         </div>
     );
